@@ -27,6 +27,14 @@ Some popular LLMs include: <br>
  ## let's set up our Python environment with the NLTK
   - Create a new .py Python file. <br>
   - Install the nltk and numpy libraries. <br>
-    
-
-
+    - Code to do so :<br> <code>pip install numpy nltk</code>
+ ## DIVE INTO CONCEPTS 
+ - TOKENIZATION
+    - Tokens are small units of data used to train gen AI models like ChatGPT and help them understand and generate language. This data may take the form of whole words, subwords, and other content.
+    - The process of making raw data like text trainable for language models is known as tokenization.
+- Tokens are essential for language models because they are the smallest units of meaning. By analyzing tokens, models can understand the structure and semantics of text.
+- Example <br>
+import nltk <br>
+  sample_text = 'I am learning Generative AI' <br>
+  tokens = nltk.word_tokenize(sample_text.lower()) <br>
+  print('Tokens:', tokens)
