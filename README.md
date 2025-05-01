@@ -41,3 +41,38 @@ Some popular LLMs include: <br>
   sample_text = 'I am learning Generative AI'
   tokens = nltk.word_tokenize(sample_text.lower())
   print('Tokens:', tokens)
+- N - GRAMS
+   - N-Grams are used by language models to learn patterns of tokens to make *predications*.
+   - N-grams are sequences of 'n' tokens from a given sample of text.
+   - This is essential for tasks like *predicting* the next word in a sentence or *understanding* the meaning of text.
+   - 3 popular models of n-grams: 
+<br> <img src="https://github.com/user-attachments/assets/856496b5-a39a-48b1-91ee-99ee090a15b3" length ='450' width ='500'> <br>
+- N-grams analyze the probability of certain word sequences based on their occurrence typically in a large dataset.
+*For example*, a *bigram model* counts *how often two words occur together and assigns a probability* to them. This helps in predicting next sentance or generating them.
+
+## USING N-GRAMS
+- Create n-grams with code by using the nltk library and accessing the ngrams package within the library.
+- Example :
+```python
+  import nltk
+  from nltk.tokenize import word_tokenize
+  from nltk.util import ngrams
+
+  # Ensure the required NLTK resources are downloaded
+  nltk.download('punkt')
+
+  # Define the sentence to process
+  sentence = "I am learning AI"
+
+  # Tokenize the sentence into words
+  tokens = word_tokenize(sentence)
+
+  # Generate n-grams 
+  unigrams = list(ngrams(tokens, 1))
+  bigrams = list(ngrams(tokens, 2))
+  trigrams = list(ngrams(tokens, 2))
+
+  # Output the bigrams
+  print("unigram : ", unigrams)
+  print("bigram : ", bigrams)
+  print("trigram : ",trigrams)
